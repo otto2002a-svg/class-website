@@ -7,6 +7,7 @@ function showInput() {
     civics: Number(document.getElementById("civics").value),
     history: Number(document.getElementById("history").value),
     geography: Number(document.getElementById("geography").value)
+    physicsChemistry: Number(document.getElementById("physicsChemistry").value),
   };
 
   // 🔥 加權總分
@@ -15,12 +16,13 @@ function showInput() {
     data.english * 4 +
     data.math * 4 +
     data.science * 2 +
+    data.physicsChemistry * 2 +
     data.civics * 2 +
     data.history * 2 +
     data.geography * 2;
 
   // 🔥 總權重（用來算平均）
-  const weight = 4 + 4 + 4 + 2 + 2 + 2 + 2; // = 20
+  const weight = 4 + 4 + 4 + 2 + 2 + 2 + 2+2; // = 22
 
   const avg = total / weight;
 
@@ -29,6 +31,7 @@ function showInput() {
     <p>英文：${data.english}</p>
     <p>數學：${data.math}</p>
     <p>自然：${data.science}</p>
+    <p>自然（物理/化學）：${data.physicsChemistry}</p>
     <p>公民：${data.civics}</p>
     <p>歷史：${data.history}</p>
     <p>地理：${data.geography}</p>
