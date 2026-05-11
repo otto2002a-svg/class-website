@@ -1,3 +1,4 @@
+console.log("JS 有成功載入");
 function showInput() {
   const data = {
     chinese: Number(document.getElementById("chinese").value),
@@ -6,7 +7,7 @@ function showInput() {
     science: Number(document.getElementById("science").value),
     civics: Number(document.getElementById("civics").value),
     history: Number(document.getElementById("history").value),
-    geography: Number(document.getElementById("geography").value)
+    geography: Number(document.getElementById("geography").value),
     physicsChemistry: Number(document.getElementById("physicsChemistry").value),
   };
 
@@ -31,10 +32,10 @@ function showInput() {
     <p>英文：${data.english}</p>
     <p>數學：${data.math}</p>
     <p>自然：${data.science}</p>
-    <p>自然（物理/化學）：${data.physicsChemistry}</p>
     <p>公民：${data.civics}</p>
     <p>歷史：${data.history}</p>
     <p>地理：${data.geography}</p>
+    <p>自然（物理/化學）：${data.physicsChemistry}</p>
   `;
 
   document.getElementById("result").innerHTML = `
